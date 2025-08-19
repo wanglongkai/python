@@ -1,17 +1,20 @@
-class Cat(object):
-  def say():
-    print('i am a cat')
+# 定义抽象基类
+class Base:
+  def say(self):
+    # 该方法不实现，会报错
+    raise NotImplementedError
 
-class Dog(object):
-  def say():
-    print('i am a dog')
+  def hello(self):
+    # 该方法可以不实现
+    pass
 
+# 实现抽象基类
+class Cat(Base):
+  pass
 
-animals = [Cat, Dog]
-for animal in animals:
-  animal.say()
-
-
+cat = Cat()
+cat.say()
+cat.hello()
 
 
 
