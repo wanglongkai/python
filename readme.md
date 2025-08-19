@@ -7,8 +7,15 @@
 - 创建虚拟环境`py -3 -m venv .venv`
 - 激活虚拟环境`.venv\Scripts\activate`
 
-## 常见数据类型和结构
-int、float、str、list
+## pip包写入requirements.txt
+`pip freeze > requirements.txt`
+
+## 从 requirements.txt 安装
+`pip install -r requirements.txt`
+
+## 常见数据类型
+- None 全局唯一`id()函数比较两个None是相等的`
+- int、float、str、list
 
 
 ## 流程控制

@@ -1,14 +1,15 @@
-from enum import Enum
+class Cat(object):
+  def say():
+    print('i am a cat')
 
-class Color(Enum):
-  RED = 'red'
-  GREEN = 2
-  BLUE = 3
-
-print(Color.RED)
-
+class Dog(object):
+  def say():
+    print('i am a dog')
 
 
+animals = [Cat, Dog]
+for animal in animals:
+  animal.say()
 
 
 
