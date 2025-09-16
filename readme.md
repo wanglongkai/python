@@ -20,17 +20,15 @@
 
 ## 常见数据类型
 
-- None 全局唯一`id()函数比较两个None是相等的`
-- int、float、str、list
-
-## 流程控制
-
-- if、elif、else
-- for
-- while
-- break、continue
-- pass
-- match 类似与 javascript 中的 switch
+- 列表 [1,2,3]
+- 元组 (1,2,3)
+- 集合 {1,2,3}
+- 字典 {'a':1, 'b':2}
+- 字符串 'hello'
+- 布尔值 True False
+- 空值 None
+- 数字 1 2 3 4 5 6 7 8 9 0
+- 浮点数 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 0.0
 
 ## 抽象基类
 
@@ -55,3 +53,22 @@ cat.hello()
 ```
 
 `isinstance()、 type()`
+
+## 循环的 else 子句
+
+如果循环在未执行 break 的情况下结束，会执行 else 子句；
+如果循环执行了 break，会跳过 else 子句。
+
+```python
+for x in range(10):
+    print(x)
+    if x == 5:
+        break
+else:
+    print('for loop is done')
+```
+
+## 解包
+
+\* 解包列表或元祖
+\*\* 解包字典
