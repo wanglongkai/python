@@ -1,9 +1,12 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 import uvicorn
 from userapi.userapi import userApi
 from shopapi.shopapi import shopApi
 
 app = FastAPI()
+# 设置静态资源文件夹
+app.mount('/statics', StaticFiles(directory='statics'))
 
 @app.get('/', tags=['根路由'], summary='根路由组件')
 def read_root():
