@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Form, File, UploadFile
+from fastapi import APIRouter, Form, File, UploadFile, Request
 from typing import Optional, List
 from pydantic import BaseModel, Field
 from datetime import date
@@ -71,3 +71,11 @@ def create_file(files: List[UploadFile]):
     }
 
 
+@userApi.get('/request', summary='测试请求头部信息如何获取')
+def test_request(request: Request):
+    '''
+        请求头信息，比如url, headers, cookies等都通过Request类型标识
+    '''
+    return {
+        "url": request.url
+    }
