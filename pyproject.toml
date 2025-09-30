@@ -3,6 +3,7 @@ name = "projectName"
 version = "0.0.1"
 dependencies = [
     "fastapi>=0.116.2",
+    "langchain>=0.3.27",
     "python-multipart>=0.0.20",
     "uvicorn>=0.35.0",
 ]
